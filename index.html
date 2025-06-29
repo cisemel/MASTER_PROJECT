@@ -8,6 +8,8 @@
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.4/dist/teachablemachine-image.min.js"></script>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -26,27 +28,28 @@
       box-shadow: 0 8px 30px rgba(0,0,0,0.08);
       text-align: center;
       width: 400px;
+      max-width: 95%;
     }
 
     .title {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: bold;
       margin-bottom: 10px;
     }
 
     .desc {
-      font-size: 15px;
+      font-size: 16px;
       color: #555;
       margin-bottom: 20px;
     }
 
     .upload-btn {
-      font-size: 40px;
+      font-size: 44px;
       background: #f0f0f0;
       border-radius: 50%;
-      width: 80px;
-      height: 80px;
-      line-height: 80px;
+      width: 90px;
+      height: 90px;
+      line-height: 90px;
       display: inline-block;
       cursor: pointer;
       transition: 0.3s;
@@ -62,7 +65,7 @@
 
     .result {
       margin-top: 20px;
-      font-size: 16px;
+      font-size: 17px;
       color: #333;
     }
 
@@ -74,8 +77,8 @@
 
     #preview-image {
       display: none;
-      width: 130px;
-      height: 130px;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 0 8px rgba(0,0,0,0.08);
@@ -83,13 +86,33 @@
 
     @media (max-width: 480px) {
       .card {
-        width: 90%;
-        padding: 30px 20px;
+        width: 95%;
+        padding: 40px 24px;
+        transform: scale(1.05);
+      }
+
+      .title {
+        font-size: 28px;
+      }
+
+      .desc {
+        font-size: 17px;
+      }
+
+      .upload-btn {
+        font-size: 48px;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+      }
+
+      .result {
+        font-size: 18px;
       }
 
       #preview-image {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
       }
     }
   </style>
@@ -105,7 +128,7 @@
 
     <label for="file-input" class="upload-btn">📤</label>
     <input type="file" id="file-input" accept="image/*" onchange="loadImage(event)"/>
-    <div style="font-size: 12px; color: #777; margin-top: 8px;">Upload a clear photo of your wall crack</div>
+    <div style="font-size: 13px; color: #777; margin-top: 8px;">Upload a clear photo of your wall crack</div>
 
     <div id="preview-container">
       <img id="preview-image" />
@@ -117,7 +140,6 @@
     </div>
   </div>
 
-  <!-- BURADA script.js doğru dosya adı! -->
   <script src="script.js"></script>
 </body>
 </html>
